@@ -33,7 +33,7 @@ class Cifar10(Dataset):
         self.vectors = _dataset.data.reshape(_dataset.data.shape[0], -1)
         self.labels = (np.array(_dataset.targets) == anomaly_class_idx).astype(int)
 
-    def __len(self):
+    def __len__(self):
         return self.labels.shape[0]
 
     def __getitem__(self, idx):
